@@ -1,2 +1,2 @@
 # BackEnd Projects
- This repository consists the source code of my backend projects
+ This repository contains the source code of my backend projects
