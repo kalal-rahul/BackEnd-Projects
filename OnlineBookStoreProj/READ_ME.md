@@ -18,6 +18,9 @@
  > - Update cost of book
  > - Delete book
  
- 3. As
+ 3. As a User 
+ 
+ > - Buy Books
+ > - Get purchase details using: Purchase ID
 
 
