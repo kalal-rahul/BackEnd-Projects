@@ -40,10 +40,13 @@
 ###  Step 3: Add and manipulate data using the PostMan API collections
 #### 	Import the following API collections
 
-**User:** > - https://api.postman.com/collections/23021943-84084552-8ff5-4ba8-8ace-fbd2698957de?access_key=PMAT-01GQY90P02YDKH7S0YWMS6699D
+**User:** 
+> https://api.postman.com/collections/23021943-84084552-8ff5-4ba8-8ace-fbd2698957de?access_key=PMAT-01GQY90P02YDKH7S0YWMS6699D
 
-**Purchase** > - https://api.postman.com/collections/23021943-ef1f443a-aabd-456e-8280-d5ffb40a630f?access_key=PMAT-01GQY8Y3EF79KQC594SGKE962N
+**Purchase:** 
+> https://api.postman.com/collections/23021943-ef1f443a-aabd-456e-8280-d5ffb40a630f?access_key=PMAT-01GQY8Y3EF79KQC594SGKE962N
 
-**Book** > - https://api.postman.com/collections/23021943-60976743-16b4-44a8-9609-e54548ae89b8?access_key=PMAT-01GQY8SZGN215MWXFVNQHH95GA
+**Book:** 
+> https://api.postman.com/collections/23021943-60976743-16b4-44a8-9609-e54548ae89b8?access_key=PMAT-01GQY8SZGN215MWXFVNQHH95GA
 
  
