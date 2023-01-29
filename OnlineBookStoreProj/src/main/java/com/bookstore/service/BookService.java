@@ -25,15 +25,27 @@ public class BookService {
 	}
 	
 	public DeleteBookResponseBody deleteBookWithName(String bookName) {
-		 Book requiredBook = bookRepo.findByBookName(bookName);
-		 bookRepo.delete(requiredBook);
-		 
-		 deleteBookResponseBody.setMessage("Deleted Book Details");
-		 deleteBookResponseBody.setBookName(requiredBook.getBookName());
-		 deleteBookResponseBody.setCost(requiredBook.getCost());
-		 deleteBookResponseBody.setId(requiredBook.getId());
 		
-		 return deleteBookResponseBody;
+		 deleteBookResponseBody = new DeleteBookResponseBody();
+		 Book requiredBook = bookRepo.findByBookName(bookName);
+		 
+		 if (requiredBook != null) {
+			 
+			 //Delete Book and generate response
+			 bookRepo.delete(requiredBook);
+			 deleteBookResponseBody.setMessage("Deleted Book Details");
+			 deleteBookResponseBody.setBookName(requiredBook.getBookName());
+			 deleteBookResponseBody.setCost(requiredBook.getCost());
+			 deleteBookResponseBody.setId(requiredBook.getId());
+			 
+			 return deleteBookResponseBody;
+		 }
+		 else {
+			 
+			 //When no book found to delete
+			 deleteBookResponseBody.setMessage("No book found with Book Name:" + bookName);
+			 return deleteBookResponseBody;
+		}	 
 	}
 	
 	
