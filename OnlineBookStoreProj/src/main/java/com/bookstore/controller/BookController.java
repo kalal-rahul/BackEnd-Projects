@@ -3,7 +3,9 @@ package com.bookstore.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -17,6 +19,8 @@ import com.bookstore.model.BookDetail;
 import com.bookstore.model.DeleteBookResponseBody;
 import com.bookstore.service.BookService;
 
+//CORS Error : This is to enable req from only this source to hit the end point
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/book")
 public class BookController {
@@ -47,4 +51,9 @@ public class BookController {
 		return bookService.storeBooks(books);
 	}
 	
+    @GetMapping("/getBooks")
+	public List<BookDetail> getListOfBooks(){
+		return bookService.getBooks();
+	}
+
 }

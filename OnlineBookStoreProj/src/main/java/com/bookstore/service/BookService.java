@@ -75,5 +75,17 @@ public class BookService {
 		
 		return addedBooks;
 	}
+
+	public List<BookDetail> getBooks() {
+		 List<Book> allBooks = bookRepo.findAll();
+		 
+		 List<BookDetail> allBooksDetails = new ArrayList<>();
+		 
+		 for (Book eachBook : allBooks) {
+			 allBooksDetails.add(new BookDetail(eachBook.getBookName(), eachBook.getCost()));
+		 }
+		 
+		 return allBooksDetails;
+	}
 	
 }
