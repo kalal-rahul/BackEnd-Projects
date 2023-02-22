@@ -3,6 +3,7 @@ package com.bookstore.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +16,8 @@ import com.bookstore.model.BookTitle;
 import com.bookstore.model.PurchaseBookResponseBody;
 import com.bookstore.service.PurchaseService;
 
+//CORS Error : This is to enable req from only this source to hit the end point
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/purchase")
 public class PurchaseController {

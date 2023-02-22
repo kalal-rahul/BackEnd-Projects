@@ -1,6 +1,7 @@
 package com.bookstore.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,8 @@ import com.bookstore.model.SignUpForm;
 import com.bookstore.service.UserService;
 
 
+//CORS Error : This is to enable req from only this source to hit the end point
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -24,12 +27,13 @@ public class UserController {
 	@Autowired
 	UserService userService;
 
+	
 	@PostMapping("/signup")
 	public SignUpForm signUp(@RequestBody SignUpForm signUpData) {
 		return userService.storeUserData(signUpData);
 	}
 	
-	@GetMapping("/login")
+	@PostMapping("/login")
 	public ResponseMessage login(@RequestBody LoginForm loginData) {
 		return userService.loginUser(loginData);
 	}
