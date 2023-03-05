@@ -25,6 +25,9 @@
  
  > - Buy Books
  > - Get purchase details using: Purchase ID
+
+## Database ER Diagrm
+ ![ER diagram](./Proj_ER_Diagram.png)
  
 ## Project Configuration
 
